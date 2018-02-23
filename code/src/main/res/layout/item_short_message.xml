@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="26px"
+            android:layout_marginRight="26px"
+            android:background="@drawable/select_radio"
+            android:button="@null"
+            android:drawablePadding="26px"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_bg_gray_contour"
+            android:padding="26px">
+
+            <TextView
+                android:id="@+id/tvNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10086"
+                android:textColor="@color/itemTextColor"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="2018/8/2"
+                android:textColor="@color/gray"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/tvContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvNum"
+                android:layout_marginTop="15px"
+                android:text="2018年1月27日，奶茶妹妹章泽天在社交网站的个人账号上，晒出了和老公刘强东的最新合影照片！"
+                android:textColor="@color/gray"
+                android:textSize="13sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<item>-->
+        <!--<bitmap android:src="@drawable/ic_wheel" />-->
+    <!--</item>-->
+    <item>
+    <rotate
+    android:drawable="@drawable/ic_wheel"
+    android:fromDegrees="360"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:toDegrees="0" />
+    </item>
+    <!--<rotate-->
+    <!--android:drawable="@drawable/bg_battery"-->
+    <!--android:fromDegrees="0"-->
+    <!--android:pivotX="50%"-->
+    <!--android:pivotY="50%"-->
+    <!--android:toDegrees="720" />-->
+
+</layer-list>

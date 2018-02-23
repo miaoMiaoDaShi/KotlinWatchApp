@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="grid_expected_size">120dp</dimen>
+    <dimen name="point_size">10dp</dimen>
+    <dimen name="circle_stroke_width">2dp</dimen>
+    <dimen name="circle_radius">75dp</dimen>
+    <dimen name="text_size">15sp</dimen>
+    <dimen name="text_bg_width">150dp</dimen>
+    <dimen name="text_bg_height">30dp</dimen>
+    <!--圆圈与文字的间隔-->
+    <dimen name="interval">10dp</dimen>
+    <dimen name="fault_tolerant_scope">10dp</dimen>
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="@color/allActivityColor"
+              android:layout_height="match_parent">
+    <include layout="@layout/tool_bar"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg_head_fun_more_b"
+        android:scaleType="centerCrop"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="26px"
+            android:text="拒绝陌生人来电"
+            android:textColor="@color/itemTextColor"
+            android:textSize="15sp"/>
+
+        <Switch
+            android:id="@+id/switchView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50px"
+            android:switchPadding="26px"
+            android:text="已打开"
+            android:textColor="@color/gray"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="26px"
+        android:textColor="@color/itemTextColor"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:text="@string/stranger_hint"/>
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160px"
+        android:layout_marginBottom="26px"
+        android:background="@android:color/white"
+        android:paddingLeft="26px"
+        android:paddingRight="26px">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_launcher"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="26px"
+            android:layout_toRightOf="@id/ivIcon"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="小露露"
+                android:textColor="@color/itemTextColor"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tvNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="138 8888 8888"
+                android:textColor="@color/gray"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <RadioButton
+            android:id="@+id/radioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="26px"
+            android:layout_marginRight="26px"
+            android:background="@drawable/select_radio"
+            android:button="@null"
+            android:drawablePadding="26px"/>
+    </RelativeLayout>
+</LinearLayout>

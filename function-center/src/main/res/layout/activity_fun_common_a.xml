@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/allActivityColor"
+              android:orientation="vertical">
+
+    <include layout="@layout/tool_bar"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_margin="26px"
+        android:background="@drawable/shape_bg_gray_contour"
+        android:hint="请输入号码"
+        android:inputType="phone"
+        android:maxLines="1"
+        android:paddingLeft="26px"
+        android:paddingRight="26px"
+        android:textColorHint="@color/editHintColor"
+        android:textSize="15sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="26px"
+        android:layout_marginRight="26px"
+        android:background="@drawable/shape_bg_gray_contour"
+        android:hint="请输入短信内容"
+        android:inputType="phone"
+        android:maxLines="1"
+        android:paddingLeft="26px"
+        android:paddingRight="26px"
+        android:textColorHint="@color/editHintColor"
+        android:textSize="15sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_margin="26px"
+        android:background="@color/gray50"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/include_edit_block"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_margin="26px"
+            android:background="@drawable/select_btn_confirm_rectangle"
+            android:text="查询话费"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+
+</LinearLayout>

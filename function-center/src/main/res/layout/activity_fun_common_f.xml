@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/allActivityColor"
+              android:orientation="vertical">
+
+    <include layout="@layout/tool_bar"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg_head_fun_com_f"
+        android:scaleType="centerCrop"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="26px"
+            android:text="@string/auto_answer"
+            android:textColor="@color/itemTextColor"
+            android:textSize="15sp"/>
+
+        <Switch
+            android:id="@+id/switchView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50px"
+            android:switchPadding="26px"
+            android:text="已打开"
+            android:textColor="@color/gray"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="26px"
+        android:layout_weight="1">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="300px"
+        android:layout_height="80px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="70px"
+        android:layout_marginTop="26px"
+        android:background="@drawable/select_btn_confirm"
+        android:text="@string/save"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"/>
+
+</LinearLayout>

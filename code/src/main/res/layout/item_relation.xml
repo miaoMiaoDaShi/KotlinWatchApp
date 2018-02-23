@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="26px"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_portrait_brother"/>
+
+            <ImageView
+                android:id="@+id/ivCheckIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_portrait_check_true"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26px"
+            android:text="爷爷"
+            android:textColor="@color/itemTextColor"
+            android:textSize="15sp"/>
+    </LinearLayout>
+</LinearLayout>

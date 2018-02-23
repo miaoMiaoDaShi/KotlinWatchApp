@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/select_bg"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:visibility="gone"
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26px"
+            android:layout_marginRight="26px"
+            android:background="@drawable/select_radio"
+            android:button="@null"
+            android:drawablePadding="26px"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="26px"
+                    android:layout_marginRight="26px">
+
+                    <ImageView
+                        android:id="@+id/ivMsgType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_msg_alarm"/>
+
+                    <ImageView
+                        android:id="@+id/ivMsgRead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_msg_read"/>
+
+                </FrameLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30px">
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="小露露的额位置变化"
+                        android:textColor="@color/itemTextColor"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="今天 11:31"
+                        android:textColor="@color/gray"
+                        android:textSize="12.5sp"/>
+
+                    <TextView
+                        android:id="@+id/tvDes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/tvTitle"
+                        android:layout_marginTop="10px"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:text="11:30小露露上报了一个位置给你,请确认宝贝是否需要帮助"
+                        android:textColor="@color/gray"
+                        android:textSize="12.5sp"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray50"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

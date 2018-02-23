@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="@color/allActivityColor"
+              android:layout_height="match_parent">
+<include layout="@layout/tool_bar"/>
+
+    <RelativeLayout
+        android:id="@+id/rlAsr"
+        android:layout_marginTop="26px"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@android:color/white"
+        android:paddingBottom="10px"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:paddingTop="10px">
+
+        <TextView
+            style="@style/itemTitle"
+            android:text="@string/asr"/>
+
+
+        <Switch
+            android:id="@+id/switchViewAsr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50px"/>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray50"/>
+
+    <RelativeLayout
+        android:id="@+id/rlBroadcast"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@android:color/white"
+        android:paddingBottom="10px"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:paddingTop="10px">
+
+        <TextView
+            style="@style/itemTitle"
+            android:text="@string/broadcast"/>
+
+
+        <Switch
+            android:id="@+id/switchViewBroadcast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50px"/>
+
+    </RelativeLayout>
+</LinearLayout>

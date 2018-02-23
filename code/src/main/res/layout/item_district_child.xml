@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/select_bg"
+              android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:paddingLeft="26dp"
+        android:paddingRight="26px">
+
+        <TextView
+            android:id="@+id/tvCountryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="A"
+            android:textColor="@color/itemTextColor"
+            android:textSize="16sp"/>
+
+
+        <TextView
+            android:id="@+id/tvCountryCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawablePadding="26px"
+            android:drawableRight="@drawable/ic_select_country"
+            android:text="+555"
+            android:textColor="@color/gray"
+            android:textSize="16sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_alignParentBottom="true"
+            android:background="#d9d9d9"/>
+    </RelativeLayout>
+</LinearLayout>

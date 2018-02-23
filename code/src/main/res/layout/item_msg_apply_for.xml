@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/select_bg"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26px"
+            android:layout_marginRight="26px"
+            android:background="@drawable/select_radio"
+            android:button="@null"
+            android:drawablePadding="26px"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="26px"
+                    android:layout_marginRight="26px">
+
+                    <ImageView
+                        android:id="@+id/ivMsgType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_msg_alarm"/>
+
+                    <ImageView
+                        android:id="@+id/ivMsgRead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_msg_read"/>
+
+                </FrameLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30px">
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="小露露的额位置变化"
+                        android:textColor="@color/itemTextColor"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="今天 11:31"
+                        android:textColor="@color/gray"
+                        android:textSize="12.5sp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvTitle">
+
+                        <TextView
+                            android:id="@+id/tvDes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10px"
+                            android:text="136-6666-3333 申请成为监护人,是否同意?"
+                            android:textColor="@color/gray"
+                            android:textSize="12.5sp"/>
+
+                        <RelativeLayout
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@id/tvDes"
+                            android:layout_marginTop="20px">
+
+                            <RelativeLayout
+                                android:id="@+id/rlBtnBlock"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone">
+
+                                <Button
+                                    android:id="@+id/btnTurnDown"
+                                    android:layout_width="130px"
+                                    android:layout_height="50px"
+                                    android:background="@drawable/select_btn_cancel_gray"
+                                    android:text="@string/turn_down"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="13sp"/>
+
+                                <Button
+                                    android:id="@+id/btnAgree"
+                                    android:layout_width="130px"
+                                    android:layout_height="50px"
+                                    android:layout_alignParentRight="true"
+                                    android:background="@drawable/select_btn_confirm"
+                                    android:text="@string/agree"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="13sp"/>
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/tvApplyForStatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="10px"
+                                android:text="已拒绝"
+                                android:textColor="@color/gray"
+                                android:textSize="12.5sp"/>
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray50"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="register_type">
+        <item>手机注册</item>
+        <item>邮箱注册</item>
+    </array>
+    <array name="forget_pwd_type">
+        <item>手机找回</item>
+        <item>邮箱找回</item>
+    </array>
+    <array name="modify_pwd_type">
+        <item>手机号码</item>
+        <item>邮箱地址</item>
+    </array>
+    <array name="connection_status">
+        <item>连接中...</item>
+        <item>已连接</item>
+    </array>
+    <array name="home_bottom_tabs">
+        <item>定位</item>
+        <item>电话</item>
+        <item>语聊</item>
+    </array>
+    <array name="function_module">
+        <item>通讯录</item>
+        <item>上学守护</item>
+        <item>上课禁用</item>
+        <item>佩戴检测</item>
+    </array>
+
+    <array name="function_module_common">
+        <item>手表话费</item>
+        <item>代收信息</item>
+        <item>通话位置</item>
+        <item>计步</item>
+        <item>定时开关机</item>
+        <item>自动接通</item>
+        <item>预留电量</item>
+        <item>语音提示</item>
+    </array>
+
+    <array name="function_module_more">
+        <item>手表设置</item>
+        <item>拒接陌生人</item>
+        <item>体感接听</item>
+        <item>手表挂失</item>
+    </array>
+
+    <array name="switch_status">
+        <item>已关闭</item>
+        <item>已开启</item>
+    </array>
+    <array name="weekdays">
+        <item>星期一</item>
+        <item>星期二</item>
+        <item>星期三</item>
+        <item>星期四</item>
+        <item>星期五</item>
+        <item>星期六</item>
+        <item>星期日</item>
+    </array>
+
+    <array name="relations">
+        <item>爸爸</item>
+        <item>妈妈</item>
+        <item>姐姐</item>
+        <item>爷爷</item>
+        <item>奶奶</item>
+        <item>哥哥</item>
+        <item>外公</item>
+        <item>外婆</item>
+        <item>老师</item>
+        <item>自定义</item>
+        <item>校讯通</item>
+    </array>
+</resources>

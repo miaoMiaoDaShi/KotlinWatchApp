@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/allActivityColor"
+              android:orientation="vertical">
+
+    <include layout="@layout/tool_bar"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_head_fun_com_b"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="26px"
+            android:text="代收手表信息"
+            android:textColor="@color/itemTextColor"
+            android:textSize="15sp"/>
+
+        <Switch
+            android:id="@+id/switchView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50px"
+            android:switchPadding="26px"
+            android:text="已打开"
+            android:textColor="@color/gray"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlHintBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10px"
+                android:layout_marginLeft="26px"
+                android:layout_marginRight="26px"
+                android:layout_marginTop="26px"
+                android:text="手表屏蔽陌生短信"
+                android:textColor="@color/itemTextColor"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26px"
+                android:layout_marginRight="26px"
+                android:text="手表会显示联系人发来的短信，不显示默认人短信"
+                android:textColor="@color/gray"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10px"
+                android:layout_marginLeft="26px"
+                android:layout_marginRight="26px"
+                android:layout_marginTop="46px"
+                android:text="代收手表短信"
+                android:textColor="@color/itemTextColor"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26px"
+                android:layout_marginRight="26px"
+                android:text="你可查看手表收到的验证码，运营商和陌生人短信"
+                android:textColor="@color/gray"
+                android:textSize="13sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="50px"
+            android:text="注: 垃圾短信会浪费手表电量和流量"
+            android:textColor="@color/gray"
+            android:textSize="13sp"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

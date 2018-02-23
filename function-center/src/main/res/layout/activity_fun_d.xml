@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="@color/allActivityColor"
+              android:layout_height="match_parent">
+    <include layout="@layout/tool_bar"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_adorn_status"
+        android:scaleType="centerCrop"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="26px"
+            android:text="@string/adorn_check"
+            android:textColor="@color/itemTextColor"
+            android:textSize="15sp"/>
+
+        <Switch
+            android:id="@+id/switchView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50px"
+            android:switchPadding="26px"
+            android:text="已打开"
+            android:textColor="@color/gray"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10px"
+        android:layout_marginLeft="26px"
+        android:layout_marginRight="26px"
+        android:layout_marginTop="26px"
+        android:text="@string/show_adorn_status"
+        android:textColor="@color/itemTextColor"
+        android:textSize="15sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26px"
+        android:layout_marginRight="26px"
+        android:text="@string/show_adorn_status_hint"
+        android:textColor="@color/gray"
+        android:textSize="13sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10px"
+        android:layout_marginLeft="26px"
+        android:layout_marginRight="26px"
+        android:layout_marginTop="46px"
+        android:text="@string/no_read_msg"
+        android:textColor="@color/itemTextColor"
+        android:textSize="15sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26px"
+        android:layout_marginRight="26px"
+        android:text="@string/no_read_msg_hint"
+        android:textColor="@color/gray"
+        android:textSize="13sp"/>
+</LinearLayout>

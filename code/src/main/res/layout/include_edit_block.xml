@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlBottom"
+    android:layout_width="match_parent"
+    android:layout_height="230px"
+    android:visibility="gone"
+    tools:showIn="@layout/activity_msg">
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="26px"
+        android:layout_marginRight="26px"
+        android:button="@drawable/select_radio"
+        android:drawablePadding="26px"
+        android:paddingLeft="26px"
+        android:text="@string/allSelect"
+        android:textColor="@color/gray"
+        android:textSize="12.5sp"/>
+
+    <Button
+        android:id="@+id/btnDel"
+        android:layout_width="300px"
+        android:layout_height="80px"
+        android:layout_centerInParent="true"
+        android:background="@drawable/select_btn_confirm"
+        android:text="@string/del"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"/>
+</RelativeLayout>

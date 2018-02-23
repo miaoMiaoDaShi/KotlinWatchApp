@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/allActivityColor"
+              android:orientation="vertical">
+
+    <include layout="@layout/tool_bar"/>
+
+    <RelativeLayout
+        android:id="@+id/rlLightTime"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_marginTop="26px"
+        android:background="@android:color/white"
+        android:paddingBottom="10px"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:paddingTop="10px">
+
+        <TextView
+            style="@style/itemTitle"
+            android:text="@string/light_time"/>
+
+        <TextView
+            android:id="@+id/tvLightTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20px"
+            android:layout_toStartOf="@+id/ivEnter"
+            android:padding="20px"
+            android:text="10秒"
+            android:textColor="@color/gray"
+            android:textSize="14sp"/>
+
+
+        <ImageView
+            android:id="@+id/ivEnter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="15px"
+            android:src="@drawable/ic_right_line"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray50"/>
+
+    <RelativeLayout
+        android:id="@+id/rlSoundSnake"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@android:color/white"
+        android:paddingBottom="10px"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:paddingTop="10px">
+
+        <TextView
+            style="@style/itemTitle"
+            android:text="@string/sound_and_shake"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="15px"
+            android:src="@drawable/ic_right_line"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray50"/>
+
+    <RelativeLayout
+        android:id="@+id/rlHourType"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@android:color/white"
+        android:paddingBottom="10px"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:paddingTop="10px">
+
+        <TextView
+            style="@style/itemTitle"
+            android:text="@string/hour_24"/>
+
+
+        <Switch
+            android:id="@+id/switchView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50px"/>
+
+    </RelativeLayout>
+</LinearLayout>
