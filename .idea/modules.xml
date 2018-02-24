@@ -4,13 +4,14 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BNWatch.iml" filepath="$PROJECT_DIR$/BNWatch.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/code/code.iml" filepath="$PROJECT_DIR$/code/code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base/base.iml" filepath="$PROJECT_DIR$/base/base.iml" />
       <module fileurl="file://$PROJECT_DIR$/function-center/function-center.iml" filepath="$PROJECT_DIR$/function-center/function-center.iml" />
       <module fileurl="file://$PROJECT_DIR$/location-center/location-center.iml" filepath="$PROJECT_DIR$/location-center/location-center.iml" />
       <module fileurl="file://$PROJECT_DIR$/message-center/message-center.iml" filepath="$PROJECT_DIR$/message-center/message-center.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project-base/project-base.iml" filepath="$PROJECT_DIR$/project-base/project-base.iml" />
       <module fileurl="file://$PROJECT_DIR$/provider/provider.iml" filepath="$PROJECT_DIR$/provider/provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/talk-center/talk-center.iml" filepath="$PROJECT_DIR$/talk-center/talk-center.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ui/ui.iml" filepath="$PROJECT_DIR$/ui/ui.iml" />
+      <module fileurl="file://E:\MyApplication\BNWatch\project-base\ui.iml" filepath="E:\MyApplication\BNWatch\project-base\ui.iml" />
       <module fileurl="file://$PROJECT_DIR$/user-center/user-center.iml" filepath="$PROJECT_DIR$/user-center/user-center.iml" />
     </modules>
   </component>

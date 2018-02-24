@@ -9,13 +9,13 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/code" />
+            <option value="$PROJECT_DIR$/base" />
             <option value="$PROJECT_DIR$/function-center" />
             <option value="$PROJECT_DIR$/location-center" />
             <option value="$PROJECT_DIR$/message-center" />
+            <option value="$PROJECT_DIR$/project-base" />
             <option value="$PROJECT_DIR$/provider" />
             <option value="$PROJECT_DIR$/talk-center" />
-            <option value="$PROJECT_DIR$/ui" />
             <option value="$PROJECT_DIR$/user-center" />
           </set>
         </option>

@@ -1,1 +1,1 @@
-include ':app', ':code', ':user-center', ':function-center', ':talk-center', ':message-center', ':location-center', ':provider', ':ui'
+include ':app', ':base', ':user-center', ':function-center', ':talk-center', ':message-center', ':location-center', ':provider', ':project-base'

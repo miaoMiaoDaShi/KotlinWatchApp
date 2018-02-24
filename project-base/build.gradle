@@ -1,6 +1,5 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
@@ -36,11 +35,6 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation project(':provider')
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    //ARouter
-    kapt "com.alibaba:arouter-compiler:$arouter_compiler_version"
-}
-repositories {
-    mavenCentral()
+    api project(':base')
+    api files('libs/BaiduLBS_Android.jar')
 }
