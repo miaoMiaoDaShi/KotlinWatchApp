@@ -1,4 +1,4 @@
-package cn.zcoder.xxp.user_center;
+package cn.zcoder.xxp.user;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

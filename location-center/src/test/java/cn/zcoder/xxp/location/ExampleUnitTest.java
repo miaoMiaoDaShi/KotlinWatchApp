@@ -1,4 +1,4 @@
-package cn.zcoder.xxp.talk_center;
+package cn.zcoder.xxp.location;
 
 import org.junit.Test;
 

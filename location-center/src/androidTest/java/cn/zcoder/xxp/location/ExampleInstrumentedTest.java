@@ -1,4 +1,4 @@
-package cn.zcoder.xxp.location_center;
+package cn.zcoder.xxp.location;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

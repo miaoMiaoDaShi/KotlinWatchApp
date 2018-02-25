@@ -1,13 +1,12 @@
-package cn.zcoder.xxp.talk_center.widgets
+package cn.zcoder.xxp.talk.widgets
 
 import android.content.Context
-import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 
-import cn.zcoder.xxp.talk_center.R
+import cn.zcoder.xxp.talk.R
 import cn.zcoder.xxp.ui.widget.dialog.BasePopupWindow
 
 

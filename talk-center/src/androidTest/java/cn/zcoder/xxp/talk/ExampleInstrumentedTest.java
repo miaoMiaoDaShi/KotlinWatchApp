@@ -1,4 +1,4 @@
-package cn.zcoder.xxp.talk_center;
+package cn.zcoder.xxp.talk;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

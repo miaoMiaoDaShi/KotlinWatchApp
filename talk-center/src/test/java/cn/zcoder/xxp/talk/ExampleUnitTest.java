@@ -1,4 +1,4 @@
-package cn.zcoder.xxp.user_center;
+package cn.zcoder.xxp.talk;
 
 import org.junit.Test;
 
