@@ -16,5 +16,7 @@ enum class ConfigKey {
     //项目文件夹
     APP_FOLDER,
     //OKhttp
-    OK_HTTP_CLIENT
+    OK_HTTP_CLIENT,
+    //sp的文件名
+    SP_FILE_NAME
 }

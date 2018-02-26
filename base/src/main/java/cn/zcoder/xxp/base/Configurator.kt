@@ -3,6 +3,7 @@ package cn.zcoder.xxp.base
 import android.app.Application
 import android.content.Context
 import android.os.Environment
+import cn.zcoder.xxp.base.common.Preference
 
 
 import java.io.File
@@ -41,6 +42,11 @@ object Configurator {
         get() = get(ConfigKey.API_HOST)
 
     /**
+     * 获取sp文件的名字
+     */
+    val spFileName: String
+        get() = get(ConfigKey.SP_FILE_NAME)
+    /**
      * 获取项目文件夹
      *
      * @return
@@ -53,6 +59,10 @@ object Configurator {
         return this
     }
 
+    fun withSPFileName(name: String = "config") {
+        put(ConfigKey.SP_FILE_NAME, name)
+        Preference.init(context, name)
+    }
 
 
     private fun put(configKey: ConfigKey, `object`: Any) {
@@ -94,6 +104,7 @@ object Configurator {
      */
     fun withApplicationContext(context: Application): Configurator {
         put(ConfigKey.APPLICATION_CONTEXT, context)
+
         return this
     }
 

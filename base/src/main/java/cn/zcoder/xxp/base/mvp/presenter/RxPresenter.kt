@@ -1,5 +1,6 @@
 package cn.zcoder.xxp.base.mvp.presenter
 
+import cn.zcoder.xxp.base.ext.parseData
 import cn.zcoder.xxp.base.mvp.view.MvpView
 import cn.zcoder.xxp.base.net.BaseDisposable
 import cn.zcoder.xxp.base.net.BaseResponse
@@ -17,7 +18,7 @@ import io.reactivex.functions.Consumer
  * Description :
  */
 
-class RxPresenter<V : MvpView> : BasePresenter<V>() {
+open class RxPresenter<V : MvpView> : BasePresenter<V>() {
     private val mCompositeDisposable: CompositeDisposable by lazy {
         CompositeDisposable()
     }
@@ -56,6 +57,7 @@ class RxPresenter<V : MvpView> : BasePresenter<V>() {
     protected fun <E : BaseDisposable<T>, T : BaseResponse> subscribe(observable: Observable<T>,
                                                                       onNext: Consumer<in T>,
                                                                       onError: Consumer<in Throwable>): E {
+
         return addSubscribe(RetrofitClient.subscribe(observable, onNext, onError)) as E
     }
 

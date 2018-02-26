@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.mcfish.blwatch.widget.ToolBar
+<cn.zcoder.xxp.ui.widget.ToolBar
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/toolBar"
+    android:id="@+id/mToolBar"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
     android:background="#0195FF">
 
     <ImageView
-        android:id="@+id/ivTopBarLeft"
+        android:id="@+id/mIvTopBarLeft"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
@@ -18,7 +18,7 @@
 
 
     <TextView
-        android:id="@+id/tvTopBarTitle"
+        android:id="@+id/mTvTopBarTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -27,7 +27,7 @@
         android:textSize="18sp"/>
 
     <TextView
-        android:id="@+id/tvTopBarRight"
+        android:id="@+id/mTvTopBarRight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -40,7 +40,7 @@
         android:visibility="gone"/>
 
     <ImageView
-        android:id="@+id/ivTopBarRight"
+        android:id="@+id/mIvTopBarRight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -49,4 +49,4 @@
         android:padding="20px"
         android:src="@drawable/ic_back"
         android:visibility="gone"/>
-</com.mcfish.blwatch.widget.ToolBar>
+</cn.zcoder.xxp.ui.widget.ToolBar>

@@ -12,7 +12,7 @@ import com.zhy.autolayout.AutoLayoutActivity
  * Description :
  */
 
-abstract class BaseActivity:AutoLayoutActivity() {
+abstract class BaseActivity : AutoLayoutActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(getLayoutId())
@@ -22,22 +22,22 @@ abstract class BaseActivity:AutoLayoutActivity() {
         start()
     }
 
-    protected fun initData() {
+    protected open fun initData() {
     }
 
-    protected fun start() {
+    protected open fun start() {
 
     }
 
-    protected fun bindListener() {
+    protected open fun bindListener() {
     }
 
     /**
      * 加载布局
      */
     @LayoutRes
-    abstract fun getLayoutId():Int
+    protected abstract fun getLayoutId(): Int
 
-    protected fun initView(savedInstanceState: Bundle?) {
+    protected open fun initView(savedInstanceState: Bundle?) {
     }
 }

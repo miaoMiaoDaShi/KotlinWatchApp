@@ -47,19 +47,19 @@ abstract class BaseFragment : Fragment() {
         lazyLoadDataIfPrepared()
     }
 
-    protected fun initView(savedInstanceState: Bundle?) {
+    protected open fun initView(savedInstanceState: Bundle?) {
 
 
     }
 
-    protected fun initData() {
+    protected open fun initData() {
     }
 
-    protected fun start() {
+    protected open fun start() {
 
     }
 
-    protected fun bindListener() {
+    protected open fun bindListener() {
     }
 
 
@@ -70,7 +70,7 @@ abstract class BaseFragment : Fragment() {
         }
     }
 
-    protected fun lazyLoad() {
+    protected open fun lazyLoad() {
 
 
     }

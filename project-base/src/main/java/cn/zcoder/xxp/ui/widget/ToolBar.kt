@@ -7,8 +7,10 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
+import cn.zcoder.xxp.base.ext.onClick
 
 import cn.zcoder.xxp.ui.R
+import kotlinx.android.synthetic.main.tool_bar.view.*
 
 
 /**
@@ -20,16 +22,10 @@ import cn.zcoder.xxp.ui.R
 
 
 class ToolBar @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : RelativeLayout(context, attrs, defStyleAttr) {
-    private var ivTopBarLeft: ImageView? = null
-    private var tvTopBarTitle: TextView? = null
-    private var tvTopBarRight: TextView? = null
-    private var ivTopBarRight: ImageView? = null
+
 
     private fun initView() {
-        ivTopBarLeft = findViewById(R.id.ivTopBarLeft)
-        tvTopBarTitle = findViewById(R.id.tvTopBarTitle)
-        tvTopBarRight = findViewById(R.id.tvTopBarRight)
-        ivTopBarRight = findViewById(R.id.ivTopBarRight)
+
     }
 
 
@@ -44,7 +40,7 @@ class ToolBar @JvmOverloads constructor(context: Context, attrs: AttributeSet? =
      * @param title 标题
      */
     fun setTitle(title: String): ToolBar {
-        tvTopBarTitle!!.text = title
+        mTvTopBarTitle.text = title
         return this
     }
 
@@ -55,7 +51,7 @@ class ToolBar @JvmOverloads constructor(context: Context, attrs: AttributeSet? =
      * @return
      */
     fun setLefticon(@DrawableRes id: Int): ToolBar {
-        ivTopBarLeft!!.setImageResource(id)
+        mIvTopBarLeft.setImageResource(id)
         return this
     }
 
@@ -66,7 +62,7 @@ class ToolBar @JvmOverloads constructor(context: Context, attrs: AttributeSet? =
      * @return
      */
     fun setRighticon(@DrawableRes id: Int): ToolBar {
-        ivTopBarRight!!.setImageResource(id)
+        mIvTopBarRight.setImageResource(id)
         return this
     }
 
@@ -77,7 +73,7 @@ class ToolBar @JvmOverloads constructor(context: Context, attrs: AttributeSet? =
      * @return
      */
     fun setRightText(title: String): ToolBar {
-        tvTopBarRight!!.text = title
+        mTvTopBarRight.text = title
         return this
     }
 
@@ -88,7 +84,7 @@ class ToolBar @JvmOverloads constructor(context: Context, attrs: AttributeSet? =
      * @return
      */
     fun showRightText(isvisible: Boolean): ToolBar {
-        tvTopBarRight!!.visibility = if (isvisible) View.VISIBLE else View.GONE
+        mTvTopBarRight.visibility = if (isvisible) View.VISIBLE else View.GONE
         return this
     }
 
@@ -99,7 +95,7 @@ class ToolBar @JvmOverloads constructor(context: Context, attrs: AttributeSet? =
      * @return
      */
     fun showRightImage(isvisible: Boolean): ToolBar {
-        ivTopBarRight!!.visibility = if (isvisible) View.VISIBLE else View.GONE
+        mIvTopBarRight.visibility = if (isvisible) View.VISIBLE else View.GONE
         return this
     }
 
@@ -110,38 +106,26 @@ class ToolBar @JvmOverloads constructor(context: Context, attrs: AttributeSet? =
      * @return
      */
     fun showLeftImage(isvisible: Boolean): ToolBar {
-        ivTopBarLeft!!.visibility = if (isvisible) View.VISIBLE else View.GONE
+        mIvTopBarLeft.visibility = if (isvisible) View.VISIBLE else View.GONE
         return this
     }
 
-    fun setOnLeftImageListener(leftImageListener: OnLeftImageListener): ToolBar {
-        ivTopBarLeft!!.setOnClickListener { leftImageListener.onClick() }
+    fun setOnLeftImageListener(block: ()->Unit): ToolBar {
+        mIvTopBarLeft.onClick(block)
         return this
     }
 
-    fun setOnRightTextListener(text: String, rightTextListener: OnRightTextListener): ToolBar {
-        tvTopBarRight!!.visibility = View.VISIBLE
-        tvTopBarRight!!.text = text
-        tvTopBarRight!!.setOnClickListener { rightTextListener.onClick() }
+    fun setOnRightTextListener(text: String, block: ()->Unit): ToolBar {
+        mTvTopBarRight.text = text
+        mTvTopBarRight.onClick(block)
         return this
     }
 
-    fun setOnRightImageListener(rightImageListener: OnRightImageListener): ToolBar {
-        ivTopBarRight!!.visibility = View.VISIBLE
-        ivTopBarRight!!.setOnClickListener { rightImageListener.onClick() }
+    fun setOnRightImageListener(block: ()->Unit): ToolBar {
+        mIvTopBarRight.onClick(block)
         return this
     }
 
-    interface OnLeftImageListener {
-        fun onClick()
-    }
 
-    interface OnRightTextListener {
-        fun onClick()
-    }
-
-    interface OnRightImageListener {
-        fun onClick()
-    }
 
 }

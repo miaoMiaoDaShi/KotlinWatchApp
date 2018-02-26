@@ -16,7 +16,7 @@ class ActivityMvpDelegateImpl<V : MvpView, P : MvpPresenter<V>> : ActivityMvpDel
     var mMvpDelegateCallback: MvpDelegateCallback<V, P>
 
 
-    override fun onCreate(bundle: Bundle) {
+    override fun onCreate(bundle: Bundle?) {
         mMvpDelegateCallback.setPresenter(mMvpDelegateCallback.createPresenter())
     }
 

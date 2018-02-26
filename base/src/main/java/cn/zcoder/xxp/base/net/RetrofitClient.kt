@@ -140,7 +140,7 @@ object RetrofitClient {
      *
      * @return
      */
-    private val ERROR_TRANSFORMER: ObservableTransformer<in Any, out Any>?
+    val ERROR_TRANSFORMER: ObservableTransformer<in Any, out Any>?
         get() =
             ObservableTransformer {
                 it.map(HandleFun())
@@ -152,7 +152,7 @@ object RetrofitClient {
      *
      * @return
      */
-    private val SCHEDULERS_TRANSFORMER: ObservableTransformer<in Any, out Any>?
+    val SCHEDULERS_TRANSFORMER: ObservableTransformer<in Any, out Any>?
         get() = ObservableTransformer {
             it.subscribeOn(Schedulers.io())
                     .unsubscribeOn(Schedulers.io())

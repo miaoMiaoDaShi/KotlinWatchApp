@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+    android:background="@color/allActivityColor">
+
+    <include layout="@layout/tool_bar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26px"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="26px"
+            android:layout_marginRight="26px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/am"
+                android:textColor="@color/itemTextColor"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvAmTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="上学时间段 06:55-44-55"
+                android:minWidth="50px"
+                android:minHeight="30px"
+                android:textColor="@color/gray"
+                android:textSize="13sp"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray50"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="26px"
+            android:layout_marginRight="26px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="开始时间: "
+                android:textColor="@color/gray"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tvAmStartTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="26px"
+                android:text="06:55"
+                android:minWidth="50px"
+                android:minHeight="30px"
+                android:textColor="@color/gray"
+                android:textSize="13sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_right_line"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="26px"
+            android:layout_marginRight="26px"
+            android:background="@color/gray50"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="26px"
+            android:layout_marginRight="26px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="结束时间: "
+                android:textColor="@color/gray"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tvAmStopTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="26px"
+                android:text="44:55"
+                android:minWidth="50px"
+                android:minHeight="30px"
+                android:textColor="@color/gray"
+                android:textSize="13sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_right_line"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26px"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="26px"
+            android:layout_marginRight="26px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/pm"
+                android:textColor="@color/itemTextColor"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvPmTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="放学时间段 06:55-44-55"
+                android:minWidth="50px"
+                android:minHeight="30px"
+                android:textColor="@color/gray"
+                android:textSize="13sp"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray50"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="26px"
+            android:layout_marginRight="26px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="开始时间: "
+                android:textColor="@color/gray"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tvPmStartTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="26px"
+                android:text="06:55"
+                android:minWidth="50px"
+                android:minHeight="30px"
+                android:textColor="@color/gray"
+                android:textSize="13sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_right_line"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="26px"
+            android:layout_marginRight="26px"
+            android:background="@color/gray50"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="26px"
+            android:layout_marginRight="26px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="结束时间: "
+                android:textColor="@color/gray"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tvPmStopTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="26px"
+                android:text="44:55"
+                android:minWidth="50px"
+                android:minHeight="30px"
+                android:textColor="@color/gray"
+                android:textSize="13sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_right_line"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26px"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="26px"
+            android:layout_marginRight="26px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="最晚到家时间"
+                android:textColor="@color/itemTextColor"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvGoHomeTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="26px"
+                android:text="44:55"
+                android:minWidth="50px"
+                android:minHeight="30px"
+                android:textColor="@color/gray"
+                android:textSize="13sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_right_line"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="26px"
+            android:layout_marginRight="26px"
+            android:background="@color/gray50"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="26px"
+            android:layout_marginRight="26px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/repetition"
+                android:textColor="@color/itemTextColor"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvRepetitionType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="26px"
+                android:text="周一至周五"
+                android:minWidth="50px"
+                android:minHeight="30px"
+                android:textColor="@color/gray"
+                android:textSize="13sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_right_line"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

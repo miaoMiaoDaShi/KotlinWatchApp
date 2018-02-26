@@ -1,6 +1,7 @@
 package cn.zcoder.xxp.base.ui.activity
 
 import android.os.Bundle
+import android.util.Log
 import cn.zcoder.xxp.base.mvp.ActivityMvpDelegate
 import cn.zcoder.xxp.base.mvp.ActivityMvpDelegateImpl
 import cn.zcoder.xxp.base.mvp.MvpDelegateCallback
@@ -24,7 +25,9 @@ abstract class BaseMvpActivity<V : MvpView, P : MvpPresenter<V>> : BaseActivity(
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mMvpDelegate.onCreate(savedInstanceState!!)
+        Log.i("ds", mMvpDelegate.toString())
+       //
+         mMvpDelegate.onCreate(savedInstanceState)
     }
 
     override fun onDestroy() {

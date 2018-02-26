@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <include layout="@layout/tool_bar"/>
+
+    <TextView
+        android:id="@+id/tvCurrentAddrs"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_below="@+id/mToolBar"
+        android:background="@android:color/white"
+        android:drawableLeft="@drawable/ic_location"
+        android:drawablePadding="26px"
+        android:gravity="center_vertical"
+        android:paddingLeft="26px"
+        android:text="广东市天河区"
+        android:textColor="@color/itemTextColor"
+        android:textSize="15sp"/>
+
+    <FrameLayout
+        android:id="@+id/flMaps"
+        android:layout_below="@id/tvCurrentAddrs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+    <ImageView
+        android:id="@+id/ivRefreshLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="50px"
+        android:layout_marginRight="15px"
+        android:src="@drawable/ic_refresh_location"/>
+
+</RelativeLayout>

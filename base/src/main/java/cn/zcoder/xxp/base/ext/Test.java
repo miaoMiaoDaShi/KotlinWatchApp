@@ -1,5 +1,9 @@
 package cn.zcoder.xxp.base.ext;
 
+import io.reactivex.Observable;
+import io.reactivex.ObservableEmitter;
+import io.reactivex.ObservableOnSubscribe;
+
 /**
  * Author : zhongwenpeng
  * Email : 1340751953@qq.com
@@ -9,5 +13,12 @@ package cn.zcoder.xxp.base.ext;
 
 
 public class Test {
-
+    public Test() {
+//        Observable.create(new ObservableOnSubscribe() {
+//            @Override
+//            public void subscribe(ObservableEmitter e) throws Exception {
+//
+//            }
+//        })
+    }
 }

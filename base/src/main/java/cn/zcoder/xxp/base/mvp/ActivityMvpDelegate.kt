@@ -13,7 +13,7 @@ import cn.zcoder.xxp.base.mvp.view.MvpView
  */
 interface ActivityMvpDelegate<V : MvpView, P : MvpPresenter<V>> {
 
-    fun onCreate(bundle: Bundle)
+    fun onCreate(bundle: Bundle?)
 
 
     fun onDestroy()

@@ -1,2 +1,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="cn.zcoder.xxp.ui"/>
+          package="cn.zcoder.xxp.ui">
+
+    <application>
+        <!-- 百度地图 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="HcqD98UrwBSK3X7sI4Osa9uu6gyNjZ9K"/>
+        <!-- 谷歌地图 -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBDPenEs5YxfP3fBfsjAKIb167Uyc-tXeY"/>
+    </application>
+</manifest>

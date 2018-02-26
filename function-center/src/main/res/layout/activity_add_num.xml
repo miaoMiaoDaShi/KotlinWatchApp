@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/allActivityColor"
+              android:orientation="vertical">
+
+    <include layout="@layout/tool_bar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:layout_margin="26px"
+        android:background="@drawable/shape_bg_gray_contour"
+
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26px"
+            android:text="联系人:"
+            android:textColor="@color/gray"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="26px"
+            android:background="@android:color/white"
+            android:hint="哥哥"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingLeft="26px"
+            android:paddingRight="26px"
+            android:textColorHint="@color/editHintColor"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:layout_marginBottom="26px"
+        android:layout_marginLeft="26px"
+        android:layout_marginRight="26px"
+        android:background="@drawable/shape_bg_gray_contour"
+
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26px"
+            android:text="手机号码:"
+            android:textColor="@color/gray"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="26px"
+            android:background="@android:color/white"
+            android:hint="请输入手机号码"
+            android:paddingLeft="26px"
+            android:inputType="number"
+            android:paddingRight="26px"
+            android:textColorHint="@color/editHintColor"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:layout_marginLeft="26px"
+        android:layout_marginRight="26px"
+        android:background="@drawable/select_btn_confirm_rectangle"
+        android:text="@string/save"
+        android:textColor="@color/white"/>
+</LinearLayout>
