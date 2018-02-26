@@ -28,7 +28,7 @@
             android:textSize="15sp"/>
 
         <Switch
-            android:id="@+id/switchView"
+            android:id="@+id/mSwitchView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -50,7 +50,7 @@
             android:orientation="vertical">
 
             <RelativeLayout
-                android:id="@+id/rlGoToSchoolTime"
+                android:id="@+id/mRlGoToSchoolTime"
                 android:layout_width="match_parent"
                 android:layout_height="140px"
                 android:layout_marginTop="26px"
@@ -71,7 +71,7 @@
                         android:textSize="15sp"/>
 
                     <TextView
-                        android:id="@+id/tvGoToSchoolTime"
+                        android:id="@+id/mTvGoToSchoolTime"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="26px"
@@ -98,7 +98,7 @@
                 android:orientation="vertical">
 
                 <RelativeLayout
-                    android:id="@+id/rlSchoolAddrs"
+                    android:id="@+id/mRlSchoolAddrs"
                     android:layout_width="match_parent"
                     android:layout_height="140px"
                     android:background="@android:color/white">
@@ -118,7 +118,7 @@
                             android:textSize="15sp"/>
 
                         <TextView
-                            android:id="@+id/tvSchoolAddrs"
+                            android:id="@+id/mTvSchoolAddrs"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="26px"
@@ -145,7 +145,7 @@
                     android:background="@color/gray50"/>
 
                 <RelativeLayout
-                    android:id="@+id/rlHomeAddrs"
+                    android:id="@+id/mRlHomeAddrs"
                     android:layout_width="match_parent"
                     android:layout_height="140px"
                     android:background="@android:color/white">
@@ -165,7 +165,7 @@
                             android:textSize="15sp"/>
 
                         <TextView
-                            android:id="@+id/tvHomeAddrs"
+                            android:id="@+id/mTvHomeAddrs"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="26px"
@@ -186,7 +186,7 @@
             </LinearLayout>
 
             <RelativeLayout
-                android:id="@+id/rlWifi"
+                android:id="@+id/mRlWifi"
                 android:layout_width="match_parent"
                 android:layout_height="140px"
                 android:layout_marginTop="26px"
@@ -207,7 +207,7 @@
                         android:textSize="15sp"/>
 
                     <TextView
-                        android:id="@+id/tvWifi"
+                        android:id="@+id/mTvWifi"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="26px"
