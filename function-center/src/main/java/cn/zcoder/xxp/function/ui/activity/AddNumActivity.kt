@@ -1,12 +1,10 @@
 package cn.zcoder.xxp.function.ui.activity
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 
 import cn.zcoder.xxp.base.ui.activity.BaseActivity
 import cn.zcoder.xxp.function.R
-import cn.zcoder.xxp.ui.widget.ToolBar
+import cn.zcoder.xxp.ui.ToolBar
 
 /**
  * Author : zhongwenpeng

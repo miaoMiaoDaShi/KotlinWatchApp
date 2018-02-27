@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:background="@color/black"
+                android:layout_height="match_parent">
+
+
+
+    <me.dm7.barcodescanner.zxing.ZXingScannerView
+        android:id="@+id/zxingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:borderColor="@color/colorPrimary"
+        app:laserColor="@color/colorPrimary"
+        app:finderOffset="30dp">
+
+    </me.dm7.barcodescanner.zxing.ZXingScannerView>
+    <include layout="@layout/tool_bar"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100px"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="370px"-->
+        <!--android:layout_height="80px"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:orientation="horizontal">-->
+        <!---->
+        <!--</LinearLayout>-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/scan_hint"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"/>
+
+        <EditText
+            android:id="@+id/txtNum"
+            android:layout_width="370px"
+            android:layout_height="80px"
+            android:layout_marginTop="70px"
+            android:background="@drawable/bg_scan_edit"
+            android:drawableLeft="@drawable/ic_scan"
+            android:drawablePadding="26px"
+            android:hint="@string/please_input_bind_num"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingLeft="26px"
+            android:paddingRight="26px"
+            android:textColorHint="@android:color/white"
+            android:textSize="13sp"
+            />
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="370px"
+            android:layout_height="80px"
+            android:layout_marginTop="70px"
+            android:background="@drawable/select_btn_confirm"
+            android:text="@string/confirm"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"/>
+    </LinearLayout>
+</RelativeLayout>

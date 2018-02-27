@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@drawable/shape_bg_gray_contour"
+        android:padding="26px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/country"
+            android:textColor="@color/editHintColor"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/tvToSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawablePadding="20px"
+            android:drawableRight="@drawable/ic_right_line"
+            android:text="中国"
+            android:textColor="@color/itemTextColor"
+            android:textSize="14sp"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26px"
+        android:background="@drawable/shape_bg_gray_contour"
+        android:orientation="vertical">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="26px">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_account"/>
+
+            <EditText
+                style="@style/loginEditText"
+                android:hint="@string/please_input_phone"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="26px"
+            android:layout_marginRight="26px"
+            android:background="@color/gray50"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="26px"
+            android:paddingRight="26px">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_verify_code"/>
+
+            <EditText
+                style="@style/loginEditText"
+                android:layout_weight="1"
+                android:hint="@string/please_input_verify"/>
+
+            <Button
+                android:layout_width="218px"
+                android:layout_height="60px"
+                android:background="@drawable/shape_bg_blue_rectangle_stroke"
+                android:text="@string/get_verify"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="26px"
+            android:layout_marginRight="26px"
+            android:background="@color/gray50"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="26px">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_pwd"/>
+
+            <EditText
+                style="@style/loginEditText"
+                android:hint="@string/please_input_pwd"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="26px"
+            android:layout_marginRight="26px"
+            android:background="@color/gray50"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="26px">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_pwd"/>
+
+            <EditText
+                style="@style/loginEditText"
+                android:hint="@string/confirm_pwd"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="26px"
+            android:layout_marginRight="26px"
+            android:background="@color/gray50"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginTop="50px"
+        android:background="@drawable/select_btn_confirm_rectangle"
+        android:text="@string/register"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30px"
+        android:padding="26px"
+        android:text="@string/have_account"
+        android:textColor="@color/colorPrimary"
+        android:textSize="13sp"/>
+
+</LinearLayout>

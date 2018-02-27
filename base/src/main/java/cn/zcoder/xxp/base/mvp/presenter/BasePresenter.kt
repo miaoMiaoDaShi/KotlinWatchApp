@@ -31,6 +31,8 @@ open class BasePresenter<V : MvpView> : MvpPresenter<V> {
         if (!isAttached) throw MvpViewNotAttachedException()
     }
 
+    fun getView(): V = mView!!
+
 
     private class MvpViewNotAttachedException internal constructor() :
             RuntimeException("Please call MvpPresenter.attachView(MvpView) before" + " requesting data to the MvpPresenter")

@@ -245,21 +245,14 @@
             android:layout_marginTop="26px"
             android:background="@android:color/white"
             android:orientation="horizontal"
-            android:paddingBottom="10px"
             android:paddingLeft="80px"
-            android:paddingRight="80px"
-            android:paddingTop="26px">
+            android:paddingRight="80px">
 
             <TextView
                 android:id="@+id/tvTabA"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawablePadding="10px"
                 android:drawableTop="@drawable/ic_home_bottom_a"
-                android:gravity="center"
                 android:text="鹏鹏"
-                android:textColor="@color/itemTextColor"
-                android:textSize="15sp"/>
+                style="@style/bottomTabsTextView"/>
 
             <View
                 android:layout_width="0dp"
@@ -268,14 +261,9 @@
 
             <TextView
                 android:id="@+id/tvTabB"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawablePadding="10px"
                 android:drawableTop="@drawable/ic_home_bottom_b"
-                android:gravity="center"
                 android:text="鹏鹏"
-                android:textColor="@color/itemTextColor"
-                android:textSize="15sp"/>
+                style="@style/bottomTabsTextView"/>
 
             <View
                 android:layout_width="0dp"
@@ -284,14 +272,9 @@
 
             <TextView
                 android:id="@+id/tvTabC"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawablePadding="10px"
                 android:drawableTop="@drawable/ic_home_bottom_c"
-                android:gravity="center"
                 android:text="鹏鹏"
-                android:textColor="@color/itemTextColor"
-                android:textSize="15sp"/>
+                style="@style/bottomTabsTextView"/>
         </LinearLayout>
 
     </LinearLayout>

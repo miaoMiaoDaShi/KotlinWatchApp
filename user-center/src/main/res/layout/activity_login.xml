@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_horizontal"
+              android:background="@color/allActivityColor"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50px"
+        android:layout_marginTop="200px"
+        android:text="@string/login"
+        android:textColor="@color/itemTextColor"
+        android:textSize="24sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_margin="26px"
+        android:background="@drawable/shape_bg_gray_contour"
+        android:padding="26px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/country"
+            android:textColor="@color/editHintColor"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/tvToSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawablePadding="20px"
+            android:drawableRight="@drawable/ic_right_line"
+            android:text="中国"
+            android:textColor="@color/itemTextColor"
+            android:textSize="14sp"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26px"
+        android:layout_marginRight="26px"
+        android:background="@drawable/shape_bg_gray_contour"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="26px"
+            android:paddingRight="26px">
+
+            <TextView
+                android:id="@+id/tvAreaCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/ic_phone"
+                android:drawablePadding="26px"
+                android:gravity="center"
+                android:text="+86"
+                android:textColor="@color/editHintColor"
+                android:textSize="14sp"
+                />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30px"
+                android:layout_marginLeft="26px"
+                android:layout_marginRight="26px"
+                android:background="@color/gray50"/>
+
+            <EditText
+                android:id="@+id/txtPhone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:maxEms="11"
+                android:maxLines="1"
+                android:background="@android:color/transparent"
+                android:hint="@string/please_input_phone"
+                android:textColorHint="@color/editHintColor"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="26px"
+            android:layout_marginRight="26px"
+            android:background="@color/gray50"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="26px"
+            android:paddingRight="26px">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_pwd"/>
+
+
+            <EditText
+                android:id="@+id/txtPwd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="26px"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:background="@android:color/transparent"
+                android:hint="@string/please_input_pwd"
+                android:textColorHint="@color/editHintColor"
+                android:textSize="14sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvForgetPwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="26px"
+            android:text="@string/forget_pwd"
+            android:textColor="@color/colorPrimary"
+            android:textSize="13sp"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="26px"
+        android:layout_marginRight="26px"
+        android:layout_marginTop="40px"
+        android:background="@drawable/select_btn_confirm_rectangle"
+        android:text="@string/confirm"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"/>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="26px"
+        android:layout_marginRight="26px"
+        android:layout_marginTop="40px"
+        android:background="@drawable/shape_bg_blue_rectangle_stroke"
+        android:text="@string/register"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15sp"/>
+
+</LinearLayout>

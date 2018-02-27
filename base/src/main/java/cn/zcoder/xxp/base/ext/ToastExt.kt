@@ -3,7 +3,7 @@ package cn.zcoder.xxp.base.ext
 import android.content.Context
 import android.support.v4.app.Fragment
 import android.widget.Toast
-import cn.zcoder.xxp.base.common.Constant
+import cn.zcoder.xxp.base.common.BaseConstant
 
 
 /**
@@ -13,13 +13,13 @@ import cn.zcoder.xxp.base.common.Constant
  * Description : toast扩展文件
  */
 fun Context.toast(content: String) {
-    Constant.showToast?.apply {
+    BaseConstant.showToast?.apply {
         setText(content)
         show()
 
     } ?: run {
         Toast.makeText(this.applicationContext, content, Toast.LENGTH_SHORT).apply {
-            Constant.showToast = this
+            BaseConstant.showToast = this
         }.show()
     }
 }

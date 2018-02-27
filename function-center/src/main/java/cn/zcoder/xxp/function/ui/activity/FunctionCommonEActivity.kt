@@ -10,11 +10,9 @@ import android.widget.TextView
 
 import com.bigkoo.pickerview.TimePickerView
 
-import java.util.Date
-
 import cn.zcoder.xxp.base.ui.activity.BaseActivity
 import cn.zcoder.xxp.function.R
-import cn.zcoder.xxp.ui.widget.ToolBar
+import cn.zcoder.xxp.ui.ToolBar
 
 /**
  * Author : zhongwenpeng

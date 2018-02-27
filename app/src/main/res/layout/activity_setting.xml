@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/allActivityColor"
+              android:orientation="vertical">
+
+    <include layout="@layout/tool_bar"/>
+
+    <RelativeLayout
+        android:id="@+id/rlMsg"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_marginTop="26px"
+        android:background="@drawable/select_bg"
+        android:paddingBottom="10px"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:paddingTop="10px">
+
+        <TextView
+            style="@style/itemTitle"
+            android:text="@string/msg_notification"/>
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20px"
+            android:layout_toStartOf="@+id/switchView"
+            android:padding="20px"
+            android:text="@string/closed"
+            android:textColor="@color/gray"
+            android:textSize="15sp"/>
+
+        <Switch
+            android:id="@+id/switchView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/ivEnter"/>
+
+        <ImageView
+            android:id="@+id/ivEnter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="15px"
+            android:src="@drawable/ic_right_line"
+            android:visibility="invisible"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray50"/>
+
+    <RelativeLayout
+        android:id="@+id/rlModifyPwd"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@drawable/select_bg"
+        android:paddingBottom="10px"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:paddingTop="10px">
+
+        <TextView
+            style="@style/itemTitle"
+            android:layout_width="wrap_content"
+            android:text="@string/modify_pwd"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="15px"
+            android:src="@drawable/ic_right_line"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray50"/>
+
+    <RelativeLayout
+        android:id="@+id/rlModifyMap"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@drawable/select_bg"
+        android:paddingBottom="10px"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:paddingTop="10px">
+
+        <TextView
+            style="@style/itemTitle"
+            android:layout_width="wrap_content"
+            android:text="@string/modify_map"/>
+
+        <TextView
+            android:id="@+id/tvMapType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20px"
+            android:layout_toStartOf="@+id/ivModifyMapEnter"
+            android:padding="20px"
+            android:text="当前: 百度地图"
+            android:textColor="@color/gray"
+            android:textSize="15sp"/>
+
+        <ImageView
+            android:id="@+id/ivModifyMapEnter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="15px"
+            android:src="@drawable/ic_right_line"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlCleanCache"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_marginTop="26px"
+        android:background="@drawable/select_bg"
+        android:paddingBottom="10px"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:paddingTop="10px">
+
+        <TextView
+            style="@style/itemTitle"
+
+            android:text="@string/clean_cache"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="15px"
+            android:src="@drawable/ic_right_line"/>
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray50"/>
+
+    <RelativeLayout
+        android:id="@+id/rlAboutUs"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@drawable/select_bg"
+        android:paddingBottom="10px"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:paddingTop="10px">
+
+        <TextView
+            style="@style/itemTitle"
+            android:text="@string/about_us"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="15px"
+            android:src="@drawable/ic_right_line"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_marginBottom="150px"
+        android:layout_marginLeft="74px"
+        android:layout_marginRight="74px"
+        android:background="@drawable/shape_bg_blue_circle_stroke"
+        android:text="@string/exit_login"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15sp"
+        android:visibility="visible"/>
+</LinearLayout>

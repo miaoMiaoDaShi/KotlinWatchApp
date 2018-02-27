@@ -5,9 +5,12 @@ import android.os.Handler
 import cn.zcoder.xxp.base.ui.activity.BaseMvpActivity
 import cn.zcoder.xxp.bnwatch.R
 import cn.zcoder.xxp.bnwatch.contract.HomeContract
+import cn.zcoder.xxp.bnwatch.contract.SplashContract
 import cn.zcoder.xxp.bnwatch.presenter.HomePresenter
+import cn.zcoder.xxp.bnwatch.presenter.SplashPresenter
 import com.alibaba.android.arouter.launcher.ARouter
 import org.jetbrains.anko.startActivity
+import org.jetbrains.anko.toast
 
 
 /**
@@ -18,7 +21,7 @@ import org.jetbrains.anko.startActivity
  */
 
 
-class SplashActivity : BaseMvpActivity<HomeContract.View, HomeContract.Presenter>(), HomeContract.View {
+class SplashActivity : BaseMvpActivity<SplashContract.View, SplashContract.Presenter>(), SplashContract.View {
     override fun showLoading() {
 
     }
@@ -27,32 +30,20 @@ class SplashActivity : BaseMvpActivity<HomeContract.View, HomeContract.Presenter
 
     }
 
-    override fun createPresenter(): HomeContract.Presenter {
-        return HomePresenter()
+    override fun createPresenter(): SplashContract.Presenter {
+        return SplashPresenter()
     }
 
-    override fun showLocationNameSuccess(lat: String, lng: String) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun showLocationNameError(e: String) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun showLoadHomeDataSuccess() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun showLoadHomeDataError(e: String) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
 
     override fun showSystemConfigSuccess() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        Handler().postDelayed({
+            finish()
+            startActivity<MainActivity>()
+        }, 1000)
     }
 
     override fun showSystemConfigError(e: String) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        toast(e)
     }
 
     override fun getLayoutId(): Int {
@@ -60,8 +51,7 @@ class SplashActivity : BaseMvpActivity<HomeContract.View, HomeContract.Presenter
     }
 
     override fun start() {
-        Handler().postDelayed({ startActivity<MainActivity>() }, 1000)
-
+        getPresenter().loadSystemConfig()
     }
 
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<cn.zcoder.xxp.ui.widget.ToolBar
+<cn.zcoder.xxp.ui.ToolBar
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/mToolBar"
@@ -49,4 +49,4 @@
         android:padding="20px"
         android:src="@drawable/ic_back"
         android:visibility="gone"/>
-</cn.zcoder.xxp.ui.widget.ToolBar>
+</cn.zcoder.xxp.ui.ToolBar>

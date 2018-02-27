@@ -1,6 +1,5 @@
 package cn.zcoder.xxp.base.mvp.presenter
 
-import cn.zcoder.xxp.base.ext.parseData
 import cn.zcoder.xxp.base.mvp.view.MvpView
 import cn.zcoder.xxp.base.net.BaseDisposable
 import cn.zcoder.xxp.base.net.BaseResponse

@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 
 import cn.zcoder.xxp.talk.R
+import cn.zcoder.xxp.talk.utlis.ProgressTextUtils
 import cn.zcoder.xxp.ui.widget.dialog.BasePopupWindow
 
 
@@ -35,6 +36,6 @@ class AudioRecoderDialog(context: Context) : BasePopupWindow(context) {
     }
 
     fun setTime(time: Long) {
-        // textView.setText(ProgressTextUtils.getProgressText(time));
+        textView.text = ProgressTextUtils.getProgressText(time);
     }
 }

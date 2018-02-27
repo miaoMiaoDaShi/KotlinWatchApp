@@ -2,9 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="cn.zcoder.xxp.bnwatch">
 
+    <uses-permission android:name="android.permission.CAMERA"/>
+
     <application
 
-        android:name=".App"
+        android:name="cn.zcoder.xxp.ui.BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -34,8 +36,37 @@
             android:name=".ui.activity.MineActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|stateUnchanged">
+        </activity>
+        <!--设置界面-->
+        <activity
+            android:name=".ui.activity.SettingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnchanged">
+        </activity>
+        <!--切换手表-->
+        <activity
+            android:name=".ui.activity.ChangeWatchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnchanged">
+        </activity>
+        <!--添加手表-->
+        <activity
+            android:name=".ui.activity.AddWatchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnchanged">
+        </activity>
 
-
+        <!--手表号码-->
+        <activity
+            android:name=".ui.activity.WatchNumActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnchanged">
+        </activity>
+        <!--绑定解绑-->
+        <activity
+            android:name=".ui.activity.BindAndUnbindActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnchanged">
         </activity>
 
     </application>

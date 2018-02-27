@@ -65,6 +65,10 @@ class MainActivity : BaseActivity(), View.OnClickListener {
         tvTabC.text = tabTitls[2]
     }
 
+    override fun start() {
+        super.start()
+
+    }
 
     override fun bindListener() {
         super.bindListener()
@@ -93,10 +97,13 @@ class MainActivity : BaseActivity(), View.OnClickListener {
                 ARouter.getInstance().build(RouterPath.FunctionCenter.PATH_FUNCTION).navigation()
             }
             R.id.tvTabA -> {
+                ARouter.getInstance().build(RouterPath.LocationCenter.PATH_LOCATION).navigation()
             }
             R.id.tvTabB -> {
+                ARouter.getInstance().build(RouterPath.UserCenter.PATH_LOGIN).navigation()
             }
             R.id.tvTabC -> {
+                ARouter.getInstance().build(RouterPath.TalkCenter.PATH_TALK).navigation()
             }
             else -> {
             }
@@ -191,6 +198,21 @@ class MainActivity : BaseActivity(), View.OnClickListener {
                     }
                 } as DisposableObserver<Any>)
 
+    }
+
+    fun onMapClick() {
+        ARouter.getInstance().build(RouterPath.LocationCenter.PATH_LOCATION).navigation()
+    }
+
+    private var mExitTime = 0L
+    override fun onBackPressed() {
+        if (System.currentTimeMillis() - mExitTime < 2000) {
+            finish()
+        } else {
+            toast("再按一次退出~")
+
+            mExitTime = System.currentTimeMillis()
+        }
     }
 }
 

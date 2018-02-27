@@ -1,5 +1,6 @@
 package cn.zcoder.xxp.bnwatch.ui.fragment
 
+import cn.zcoder.xxp.bnwatch.ui.activity.MainActivity
 import cn.zcoder.xxp.ui.widget.map.base.BaseGoogleMapFragment
 
 
@@ -10,13 +11,13 @@ import cn.zcoder.xxp.ui.widget.map.base.BaseGoogleMapFragment
  * Description :
  */
 
-class HomeGoogleMapFragment:BaseGoogleMapFragment() {
+class HomeGoogleMapFragment : BaseGoogleMapFragment() {
 
     companion object {
         fun newInstance() = HomeGoogleMapFragment()
     }
+
     override fun onMapReady() {
-
-
+        googleMap.setOnMapClickListener { (activity as MainActivity).onMapClick() }
     }
 }

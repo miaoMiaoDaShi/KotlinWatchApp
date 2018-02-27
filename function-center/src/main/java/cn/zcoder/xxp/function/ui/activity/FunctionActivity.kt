@@ -1,12 +1,8 @@
 package cn.zcoder.xxp.function.ui.activity
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.util.SparseArray
-import android.view.View
 import android.widget.TextView
 
 import com.chad.library.adapter.base.BaseQuickAdapter
@@ -19,7 +15,7 @@ import java.util.ArrayList
 import cn.zcoder.xxp.base.ui.activity.BaseActivity
 import cn.zcoder.xxp.function.R
 import cn.zcoder.xxp.provider.arouter.RouterPath
-import cn.zcoder.xxp.ui.widget.ToolBar
+import cn.zcoder.xxp.ui.ToolBar
 import com.alibaba.android.arouter.facade.annotation.Route
 import kotlinx.android.synthetic.main.activity_function.*
 import org.jetbrains.anko.startActivity
@@ -37,7 +33,7 @@ class FunctionActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         findViewById<ToolBar>(R.id.mToolBar).setTitle(getString(R.string.function))
-                .setOnLeftImageListener({ finish() })
+                .setOnLeftImageListener({finish() })
         setUpFunction()
     }
 

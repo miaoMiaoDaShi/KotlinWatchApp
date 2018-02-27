@@ -1,16 +1,12 @@
 package cn.zcoder.xxp.function.ui.activity
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Switch
-import android.widget.TextView
 import cn.zcoder.xxp.base.ext.onClick
 
 import cn.zcoder.xxp.base.ui.activity.BaseActivity
 import cn.zcoder.xxp.function.R
-import cn.zcoder.xxp.ui.widget.ToolBar
+import cn.zcoder.xxp.ui.ToolBar
 import kotlinx.android.synthetic.main.activity_fun_b.*
 import org.jetbrains.anko.startActivity
 
@@ -25,6 +21,7 @@ class FunctionBActivity : BaseActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when (v?.id) {
             R.id.mRlGoToSchoolTime -> {
+                startActivity<GoToSchoolTimeActivity>()
             }
             R.id.mRlSchoolAddrs -> {
                 startActivity<SelectAddrsActivity>()
@@ -55,6 +52,9 @@ class FunctionBActivity : BaseActivity(), View.OnClickListener {
     override fun bindListener() {
         super.bindListener()
         mRlGoToSchoolTime.onClick(this)
+        mRlSchoolAddrs.onClick(this)
+        mRlHomeAddrs.onClick(this)
+        mRlWifi.onClick(this)
     }
 
 }

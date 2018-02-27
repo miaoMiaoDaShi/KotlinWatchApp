@@ -27,11 +27,7 @@ interface HomeContract {
 
         fun showLoadHomeDataError(e: String)
 
-        /**
-         * 启动页的数据
-         */
-        fun showSystemConfigSuccess()
-        fun showSystemConfigError(e: String)
+
 
 
     }

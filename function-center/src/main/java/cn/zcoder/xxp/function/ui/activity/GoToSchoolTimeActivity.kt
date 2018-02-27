@@ -4,12 +4,13 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
+import cn.zcoder.xxp.base.ext.onClick
 
 
 import cn.zcoder.xxp.base.ui.activity.BaseActivity
 import cn.zcoder.xxp.function.R
-import cn.zcoder.xxp.ui.widget.ToolBar
+import cn.zcoder.xxp.ui.ToolBar
+import kotlinx.android.synthetic.main.activity_go_to_school_time.*
 
 /**
  * Author : zhongwenpeng
@@ -18,7 +19,7 @@ import cn.zcoder.xxp.ui.widget.ToolBar
  * Description :上学守护
  */
 
-class GoToSchoolTimeActivity : BaseActivity() {
+class GoToSchoolTimeActivity : BaseActivity(), View.OnClickListener {
 
 
     override fun getLayoutId(): Int {
@@ -28,15 +29,27 @@ class GoToSchoolTimeActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         findViewById<ToolBar>(R.id.mToolBar)
-        .setTitle("设置时间段")
-                .setOnLeftImageListener({finish()})
-                .setOnRightTextListener(getString(R.string.save),{save()})
+                .setTitle("设置时间段")
+                .setOnLeftImageListener({ finish() })
+                .setOnRightTextListener(getString(R.string.save), { save() })
     }
 
     /**
      * 保存
      */
     private fun save() {
+
+    }
+
+    override fun bindListener() {
+        super.bindListener()
+        tvAmTime.onClick(this)
+    }
+
+    /**
+     * 从新加载本地数据  本地 ...
+     */
+    private fun reLoadData() {
 
     }
 
@@ -63,27 +76,26 @@ class GoToSchoolTimeActivity : BaseActivity() {
         }
     }
 
+    override fun onClick(v: View?) {
+        when (v?.id) {
+            R.id.tvAmTime -> {
+            }
+            R.id.tvAmStopTime -> {
+            }
+            R.id.tvPmTime -> {
+            }
+            R.id.tvPmStartTime -> {
+            }
+            R.id.tvPmStopTime -> {
+            }
+            R.id.tvGoHomeTime -> {
+            }
+            R.id.tvRepetitionType -> {
+            }
+            else -> {
+            }
+        }
 
-    //    @OnClick({R.id.tvAmTime, R.id.tvAmStartTime, R.id.tvAmStopTime, R.id.tvPmTime, R.id.tvPmStartTime, R.id.tvPmStopTime, R.id.tvGoHomeTime, R.id.tvRepetitionType})
-    //    public void onViewClicked(View view) {
-    //        switch (view.getId()) {
-    //            case R.id.tvAmTime:
-    //                break;
-    //            case R.id.tvAmStartTime:
-    //                break;
-    //            case R.id.tvAmStopTime:
-    //                break;
-    //            case R.id.tvPmTime:
-    //                break;
-    //            case R.id.tvPmStartTime:
-    //                break;
-    //            case R.id.tvPmStopTime:
-    //                break;
-    //            case R.id.tvGoHomeTime:
-    //                break;
-    //            case R.id.tvRepetitionType:
-    //                break;
-    //            default:
-    //        }
-    //    }
+    }
+
 }

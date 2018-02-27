@@ -41,7 +41,7 @@ dependencies {
     api 'com.android.support:recyclerview-v7:26.1.0'
     api 'de.hdodenhof:circleimageview:2.1.0'
     //webView
-    implementation 'com.just.agentweb:agentweb:2.0.1'
+    api 'com.just.agentweb:agentweb:2.0.1'
     //最新版本
     api 'com.zhy:autolayout:1.4.5'
     api 'com.zhihu.android:matisse:0.4.3'

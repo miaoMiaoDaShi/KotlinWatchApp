@@ -21,7 +21,7 @@ abstract class BaseDisposable<T>(val observable: Observable<T>) : DisposableObse
         onEnd()
     }
 
-    override fun onStart() {
+    override open fun onStart() {
         super.onStart()
 
     }
@@ -30,7 +30,7 @@ abstract class BaseDisposable<T>(val observable: Observable<T>) : DisposableObse
         onEnd()
     }
 
-    protected fun onEnd() {
+    protected open fun onEnd() {
 
     }
 

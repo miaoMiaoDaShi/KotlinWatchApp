@@ -1,2 +1,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="cn.zcoder.xxp.talk"/>
+          package="cn.zcoder.xxp.talk">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <application>
+        <!--主界面-->
+        <activity
+            android:name=".ui.activity.TalkActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnchanged">
+        </activity>
+    </application>
+</manifest>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/allActivityColor"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_my_center">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30px"
+            android:padding="26px"
+            android:src="@drawable/ic_back"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvAddWatch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/ic_add"
+                android:drawablePadding="10px"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:text="@string/add_watch"/>
+
+           <LinearLayout
+               android:id="@+id/llToMineData"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:gravity="center">
+               <de.hdodenhof.circleimageview.CircleImageView
+                   android:id="@+id/ivPortrait"
+                   android:layout_width="150px"
+                   android:layout_height="150px"
+                   android:layout_marginLeft="90px"
+                   android:layout_marginRight="90px"
+                   app:civ_border_color="@android:color/white"
+                   app:civ_border_width="2.5dp"
+                   android:src="@mipmap/ic_launcher"/>
+               <TextView
+                   android:id="@+id/tvNickName"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@android:color/white"
+                   android:layout_marginTop="10px"
+                   android:textSize="15sp"
+                   android:text="XXX"/>
+           </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10px"
+                android:gravity="center"
+                android:drawableTop="@drawable/ic_switch"
+                android:text="@string/switch_"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlWatchNum"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@drawable/select_bg"
+        android:paddingBottom="10px"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:paddingTop="10px">
+
+
+        <TextView
+            android:drawableLeft="@drawable/ic_watch_num"
+            android:drawablePadding="26px"
+            android:text="@string/watch_phone"
+            style="@style/itemTitle" />
+
+        <TextView
+            android:id="@+id/tvWatchNum"
+            android:layout_marginRight="26px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/gray"
+            android:layout_toLeftOf="@+id/ivLeftEnter"
+            android:text="150152859563"/>
+
+        <ImageView
+            android:id="@+id/ivLeftEnter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="15px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_right_line" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray50"/>
+
+    <RelativeLayout
+        android:id="@+id/rlBindUnbind"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@drawable/select_bg"
+        android:paddingBottom="10px"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:paddingTop="10px">
+
+
+        <TextView
+            android:drawableLeft="@drawable/ic_bind_unbind"
+            android:drawablePadding="26px"
+            android:text="@string/bind_unbind"
+            style="@style/itemTitle" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="15px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_right_line" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlSetting"
+        android:layout_marginTop="26px"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@drawable/select_bg"
+        android:paddingBottom="10px"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:paddingTop="10px">
+
+
+        <TextView
+            android:drawableLeft="@drawable/ic_setting"
+            android:drawablePadding="26px"
+            android:text="@string/app_setting"
+            style="@style/itemTitle" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="15px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_right_line" />
+    </RelativeLayout>
+</LinearLayout>

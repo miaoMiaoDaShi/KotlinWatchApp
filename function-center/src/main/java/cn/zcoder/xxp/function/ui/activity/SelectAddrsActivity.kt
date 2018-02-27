@@ -1,34 +1,21 @@
 package cn.zcoder.xxp.function.ui.activity
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentTransaction
-import android.widget.FrameLayout
-import android.widget.TextView
+import cn.zcoder.xxp.base.common.Preference
+import cn.zcoder.xxp.base.ext.toast
 
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.GoogleApiAvailability
-import com.google.gson.Gson
-
-
-import java.io.IOException
 
 
 import cn.zcoder.xxp.base.ui.activity.BaseActivity
 import cn.zcoder.xxp.function.R
-import cn.zcoder.xxp.ui.widget.ToolBar
-import io.reactivex.Observable
-import io.reactivex.ObservableOnSubscribe
-import io.reactivex.observers.DisposableObserver
-import okhttp3.Call
-import okhttp3.Callback
-import okhttp3.OkHttpClient
-import okhttp3.Request
-import okhttp3.Response
-import timber.log.Timber
+import cn.zcoder.xxp.function.ui.fragment.SelectAddrsBaiduMapFragment
+import cn.zcoder.xxp.function.ui.fragment.SelectAddrsGoogleMapFragment
+import cn.zcoder.xxp.ui.ToolBar
+import cn.zcoder.xxp.ui.widget.common.Constant
 
 
 /**
@@ -40,21 +27,24 @@ import timber.log.Timber
 
 
 class SelectAddrsActivity : BaseActivity() {
-
-    internal var tvCurrentAddrs: TextView? = null
-    internal var flMaps: FrameLayout? = null
     //地图类型
-    private val mMapType = -1
-    private val mFragmentManager: FragmentManager? = null
-    private val mGoogleMapFragment: Fragment? = null
-    private val mBaiduMapFragment: Fragment? = null
+    private var mMapType by Preference(Constant.MapType.MAP_TYPE, 0)
+    private val mFragmentManager: FragmentManager by lazy {
+        supportFragmentManager
+    }
+    private val mGoogleMapFragment: Fragment by lazy {
+        SelectAddrsGoogleMapFragment.newInstance()
+    }
+    private val mBaiduMapFragment: Fragment by lazy {
+        SelectAddrsBaiduMapFragment.newInstance()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         findViewById<ToolBar>(R.id.mToolBar)
                 .setTitle("设置地址")
-                .setOnLeftImageListener({finish()})
-                .setOnRightTextListener("保存", {save()})
+                .setOnLeftImageListener({ finish() })
+                .setOnRightTextListener("保存", { save() })
 
 
     }
@@ -68,6 +58,58 @@ class SelectAddrsActivity : BaseActivity() {
         return R.layout.activity_select_addrs
     }
 
+    override fun start() {
+        super.start()
+    }
 
+
+
+    override fun onResume() {
+        super.onResume()
+        setUpMap()
+    }
+
+    /**
+     * 开始加载地图
+     */
+    private fun setUpMap() {
+        if (GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(applicationContext) != ConnectionResult.SUCCESS) {
+            toast(R.string.not_google_play)
+            mMapType = Constant.MapType.MAP_TYPE_BAIDU
+        }
+        when (mMapType) {
+            Constant.MapType.MAP_TYPE_BAIDU -> setUpBaiduMap()
+            Constant.MapType.MAP_TYPE_GOOGLE -> setUpGoogleMap()
+        }
+    }
+
+    /**
+     * 百度地图初始化
+     */
+    private fun setUpBaiduMap() {
+        val baiduTransaction = mFragmentManager.beginTransaction()
+        baiduTransaction.replace(R.id.flMaps, mBaiduMapFragment)
+        baiduTransaction.commitAllowingStateLoss()
+
+    }
+
+    /**
+     * googleMap初始化
+     */
+    private fun setUpGoogleMap() {
+        val googleTransaction = mFragmentManager.beginTransaction()
+        googleTransaction.replace(R.id.flMaps, mGoogleMapFragment)
+        googleTransaction.commitAllowingStateLoss()
+        //getLocationName(30.67, 106.04)
+    }
+
+
+    fun onLoadAddrsNameSuccess() {
+
+    }
+
+    fun onLoadAddrsNameError() {
+
+    }
 
 }

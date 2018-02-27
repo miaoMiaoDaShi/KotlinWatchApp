@@ -1,18 +1,11 @@
 package cn.zcoder.xxp.function.ui.activity
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toolbar
 
 
 import cn.zcoder.xxp.base.ui.activity.BaseActivity
 import cn.zcoder.xxp.function.R
-import cn.zcoder.xxp.ui.widget.ToolBar
-import kotlinx.android.synthetic.main.activity_address_book_detail.*
+import cn.zcoder.xxp.ui.ToolBar
 
 /**
  * Author : zhongwenpeng

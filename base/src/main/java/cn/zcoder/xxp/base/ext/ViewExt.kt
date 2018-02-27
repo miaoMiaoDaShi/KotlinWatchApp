@@ -16,7 +16,7 @@ import android.view.View.VISIBLE
  * 点击事件扩展方法
  */
 fun View.onClick(method: () -> Unit): View {
-    setOnClickListener { method }
+    setOnClickListener   {method.invoke()}
     return this
 }
 

@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.content.SharedPreferences.Editor
 import cn.zcoder.xxp.base.Configurator
-import cn.zcoder.xxp.base.common.Constant
 
 /*
     SP工具类

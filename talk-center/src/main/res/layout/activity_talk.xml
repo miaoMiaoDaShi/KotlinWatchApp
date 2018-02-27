@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/allActivityColor"
+              android:orientation="vertical">
+
+    <include layout="@layout/tool_bar"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvTalk"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_bg_gray_contour"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:layout_marginLeft="26px"
+            android:src="@drawable/ic_touch_to_talk"/>
+
+        <Button
+            android:id="@+id/btnTouchToTalk"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_marginLeft="26px"
+            android:layout_marginRight="26px"
+            android:background="@drawable/select_touch_talk_bg"
+            android:text="@string/touch_talk"
+            android:textColor="@color/gray"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+</LinearLayout>

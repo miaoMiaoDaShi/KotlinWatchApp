@@ -40,7 +40,7 @@ object RetrofitClient {
      * @return
      * @see BaseDisposable
     </T></E> */
-    fun <E : BaseDisposable<T>,T :BaseResponse> subscribe(disposable: BaseDisposable<T>): E {
+    fun <E : BaseDisposable<T>, T : BaseResponse> subscribe(disposable: BaseDisposable<T>): E {
 
         COMPOSITE_DISPOSABLE.add(disposable)
         disposable
