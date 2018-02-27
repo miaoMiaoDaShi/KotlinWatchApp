@@ -111,7 +111,7 @@ object RetrofitClient {
     private val DEFAULT_TIMEOUT: Long = 30
     val HTTP_CLIENT_BUILDER: OkHttpClient.Builder = OkHttpClient.Builder()
             .addNetworkInterceptor(
-                    HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.HEADERS))
+                    HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
             .connectTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)
             .writeTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)
             .readTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)

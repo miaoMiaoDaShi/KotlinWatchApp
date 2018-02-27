@@ -16,11 +16,11 @@ import cn.zcoder.xxp.base.mvp.view.MvpView
 interface FragmentMvpDelegate<V : MvpView, P : MvpPresenter<V>> {
 
 
-    fun onCreate(saved: Bundle)
+    fun onCreate(saved: Bundle?)
 
     fun onDestroy()
 
-    fun onViewCreated(view: View, savedInstanceState: Bundle?)
+    fun onViewCreated(view: View?, savedInstanceState: Bundle?)
 
 
     fun onDestroyView()
@@ -33,7 +33,7 @@ interface FragmentMvpDelegate<V : MvpView, P : MvpPresenter<V>> {
 
     fun onStop()
 
-    fun onActivityCreated(savedInstanceState: Bundle)
+    fun onActivityCreated(savedInstanceState: Bundle?)
 
 
     fun onAttach(activity: Activity)

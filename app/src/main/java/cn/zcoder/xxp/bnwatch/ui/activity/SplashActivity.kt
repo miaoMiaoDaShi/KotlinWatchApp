@@ -2,6 +2,7 @@ package cn.zcoder.xxp.bnwatch.ui.activity
 
 import android.os.Bundle
 import android.os.Handler
+import cn.zcoder.xxp.base.common.Preference
 import cn.zcoder.xxp.base.ui.activity.BaseMvpActivity
 import cn.zcoder.xxp.bnwatch.R
 import cn.zcoder.xxp.bnwatch.contract.HomeContract
@@ -22,6 +23,8 @@ import org.jetbrains.anko.toast
 
 
 class SplashActivity : BaseMvpActivity<SplashContract.View, SplashContract.Presenter>(), SplashContract.View {
+    var mSystemConfiginfo by Preference("systemConfig", "")
+
     override fun showLoading() {
 
     }
@@ -51,6 +54,7 @@ class SplashActivity : BaseMvpActivity<SplashContract.View, SplashContract.Prese
     }
 
     override fun start() {
+    toast(mSystemConfiginfo)
         getPresenter().loadSystemConfig()
     }
 

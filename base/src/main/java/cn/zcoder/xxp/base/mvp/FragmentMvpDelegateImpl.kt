@@ -17,18 +17,19 @@ class FragmentMvpDelegateImpl<V : MvpView, P : MvpPresenter<V>> : FragmentMvpDel
 
     var mMvpDelegateCallback: MvpDelegateCallback<V, P>
 
-    override fun onCreate(saved: Bundle) {
+    override fun onCreate(saved: Bundle?) {
     }
 
     override fun onDestroy() {
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         mMvpDelegateCallback.setPresenter(mMvpDelegateCallback.createPresenter())
+        mMvpDelegateCallback.getPresenter().attachView(mMvpDelegateCallback.getMvpView())
     }
 
     override fun onDestroyView() {
-        mMvpDelegateCallback.getPresenter().attachView(mMvpDelegateCallback.getMvpView())
+        mMvpDelegateCallback.getPresenter().detachView()
     }
 
     override fun onPause() {
@@ -43,7 +44,7 @@ class FragmentMvpDelegateImpl<V : MvpView, P : MvpPresenter<V>> : FragmentMvpDel
     override fun onStop() {
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle) {
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
     }
 
     override fun onAttach(activity: Activity) {

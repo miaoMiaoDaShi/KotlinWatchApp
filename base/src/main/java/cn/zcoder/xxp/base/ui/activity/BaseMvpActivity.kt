@@ -24,10 +24,11 @@ abstract class BaseMvpActivity<V : MvpView, P : MvpPresenter<V>> : BaseActivity(
     lateinit var mPresenter: P
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        mMvpDelegate.onCreate(savedInstanceState)
         super.onCreate(savedInstanceState)
         Log.i("ds", mMvpDelegate.toString())
        //
-         mMvpDelegate.onCreate(savedInstanceState)
+
     }
 
     override fun onDestroy() {

@@ -18,11 +18,12 @@ class ActivityMvpDelegateImpl<V : MvpView, P : MvpPresenter<V>> : ActivityMvpDel
 
     override fun onCreate(bundle: Bundle?) {
         mMvpDelegateCallback.setPresenter(mMvpDelegateCallback.createPresenter())
+        mMvpDelegateCallback.getPresenter().attachView(mMvpDelegateCallback.getMvpView())
     }
 
 
     override fun onDestroy() {
-        mMvpDelegateCallback.getPresenter().attachView(mMvpDelegateCallback.getMvpView())
+        mMvpDelegateCallback.getPresenter().detachView()
     }
 
     override fun onPause() {

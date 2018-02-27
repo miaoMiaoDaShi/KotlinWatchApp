@@ -12,7 +12,7 @@ android {
         config {
             keyAlias 'BNCLW'
             keyPassword '123456'
-            storeFile file('E:/project/BNCLW/Android/app/Application/BNCLW.jks')
+            storeFile file('E:/project/BNCLW/project/Application/BNCLW.jks')
             storePassword '123456'
         }
     }
@@ -46,24 +46,20 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    if (isFunctionModule.toBoolean()){
+    if (isFunctionModule.toBoolean()) {
         implementation project(':function-center')
     }
-    if(isLocationModule.toBoolean()){
+    if (isLocationModule.toBoolean()) {
         implementation project(':location-center')
     }
-    if(isMessageModule.toBoolean()){
+    if (isMessageModule.toBoolean()) {
         implementation project(':message-center')
     }
-    if(isTalkModule.toBoolean()){
+    if (isTalkModule.toBoolean()) {
         implementation project(':talk-center')
     }
-    if(isUserModule.toBoolean()){
+    if (isUserModule.toBoolean()) {
         implementation project(':user-center')
     }
-
-
     implementation project(':provider')
-
-
 }
