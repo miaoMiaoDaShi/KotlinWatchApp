@@ -67,4 +67,8 @@ abstract class BaseMvpFragment<V : MvpView, P : MvpPresenter<V>> : BaseFragment(
         super.onDetach()
         mMvpDelegate.onDetach()
     }
+
+    override fun getMvpView(): V = this as V
+
+    override fun getPresenter(): P = mPresenter
 }
