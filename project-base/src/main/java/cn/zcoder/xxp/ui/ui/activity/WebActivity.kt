@@ -27,7 +27,7 @@ class WebActivity : BaseActivity() {
         super.initView(savedInstanceState)
         findViewById<ToolBar>(R.id.mToolBar)
                 .setTitle(intent.getStringExtra("title"))
-                .setOnRightImageListener { finish() }
+                .setOnLeftImageListener { finish() }
 
         AgentWeb.with(this)//传入Activity
                 .setAgentWebParent(llContent, LinearLayout.LayoutParams(-1, -1))//传入AgentWeb 的父控件 ，如果父控件为 RelativeLayout ， 那么第二参数需要传入 RelativeLayout.LayoutParams
