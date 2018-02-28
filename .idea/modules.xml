@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/BNWatch.iml" filepath="$PROJECT_DIR$/BNWatch.iml" />
       <module fileurl="file://E:\MyAndroid\KotlinWatchApp\BNWatch.iml" filepath="E:\MyAndroid\KotlinWatchApp\BNWatch.iml" />
-      <module fileurl="file://$PROJECT_DIR$/KotlinWatchApp.iml" filepath="$PROJECT_DIR$/KotlinWatchApp.iml" />
+      <module fileurl="file://E:\MyApplication\BNWatch\KotlinWatchApp.iml" filepath="E:\MyApplication\BNWatch\KotlinWatchApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/base/base.iml" filepath="$PROJECT_DIR$/base/base.iml" />
       <module fileurl="file://$PROJECT_DIR$/function-center/function-center.iml" filepath="$PROJECT_DIR$/function-center/function-center.iml" />

@@ -1,9 +1,12 @@
 package cn.zcoder.xxp.ui
 
 import android.app.Application
+import android.support.annotation.NonNull
+import android.util.Log
 import cn.zcoder.xxp.base.Configurator
 import com.alibaba.android.arouter.launcher.ARouter
 import com.baidu.mapapi.SDKInitializer
+import timber.log.Timber
 
 
 /**
@@ -13,7 +16,7 @@ import com.baidu.mapapi.SDKInitializer
  * Description :
  */
 
-class BaseApplication:Application()  {
+class BaseApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         Configurator.withApplicationContext(this)
@@ -24,5 +27,30 @@ class BaseApplication:Application()  {
         ARouter.openDebug()
         ARouter.init(this)
         SDKInitializer.initialize(this)
+
+        if (BuildConfig.DEBUG) {
+            Timber.plant(Timber.DebugTree())
+        } else {
+            Timber.plant(CrashReportingTree());
+        }
     }
+}
+
+private class CrashReportingTree : Timber.Tree() {
+    override fun log(priority: Int, tag: String?, @NonNull message: String, t: Throwable?) {
+        if (priority == Log.VERBOSE || priority == Log.DEBUG) {
+            return
+        }
+
+        FakeCrashLibrary.log(priority, tag, message)
+
+        if (t != null) {
+            if (priority == Log.ERROR) {
+                FakeCrashLibrary.logError(t)
+            } else if (priority == Log.WARN) {
+                FakeCrashLibrary.logWarning(t)
+            }
+        }
+    }
+
 }

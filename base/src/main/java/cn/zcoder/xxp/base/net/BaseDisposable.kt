@@ -1,5 +1,6 @@
 package cn.zcoder.xxp.base.net
 
+import cn.zcoder.xxp.base.mvp.view.MvpView
 import io.reactivex.Observable
 import io.reactivex.observers.DisposableObserver
 
@@ -10,7 +11,7 @@ import io.reactivex.observers.DisposableObserver
  * Description :
  */
 
-abstract class BaseDisposable<T>(val observable: Observable<T>) : DisposableObserver<T>() {
+abstract class BaseDisposable<T>(val observable: Observable<T>,val view: MvpView) : DisposableObserver<T>() {
 
     override fun onError(e: Throwable) {
         if (e is ExceptionHandle.ResponseThrowable) {
@@ -18,21 +19,21 @@ abstract class BaseDisposable<T>(val observable: Observable<T>) : DisposableObse
         } else {
             onError(ExceptionHandle.ResponseThrowable(e, ExceptionHandle.ERROR_CODE.UNKNOWN))
         }
-        onEnd()
+
+        view.dismissLoading()
     }
 
     override open fun onStart() {
         super.onStart()
+        view.showLoading()
 
     }
 
     override fun onComplete() {
-        onEnd()
+       view.dismissLoading()
     }
 
-    protected open fun onEnd() {
 
-    }
 
     abstract fun onError(e: ExceptionHandle.ResponseThrowable)
 

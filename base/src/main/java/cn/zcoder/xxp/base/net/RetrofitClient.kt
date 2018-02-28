@@ -6,6 +6,7 @@ import android.text.TextUtils
 import java.util.concurrent.TimeUnit
 
 import cn.zcoder.xxp.base.Configurator
+import cn.zcoder.xxp.base.mvp.view.MvpView
 import com.google.common.io.Files.map
 import io.reactivex.Observable
 import io.reactivex.ObservableTransformer
@@ -45,38 +46,12 @@ object RetrofitClient {
         COMPOSITE_DISPOSABLE.add(disposable)
         disposable
                 .observable
-                .compose(SCHEDULERS_TRANSFORMER)
+                .compose(defaultTransformer())
                 .compose(ERROR_TRANSFORMER)
                 .subscribeWith(disposable as BaseDisposable<Any>)
 
         return disposable as E
     }
-
-    /**
-     * 这个配合lambda饮用味更佳
-     *
-     * @param observable
-     * @param onNext
-     * @param onError
-     * @param <E>
-     * @param <T>
-     * @return
-    </T></E> */
-    fun <E : Disposable, T : BaseResponse> subscribe(observable: Observable<T>,
-                                                     onNext: Consumer<in T>,
-                                                     onError: Consumer<in Throwable>): E {
-
-        val disposable = observable
-                .compose(SCHEDULERS_TRANSFORMER)
-                .compose(ERROR_TRANSFORMER)
-                .subscribe(onNext as Consumer<in Any>?, onError)
-
-        COMPOSITE_DISPOSABLE.add(disposable)
-
-
-        return disposable as E
-    }
-
 
     /**
      * 抛出的异常转化成 自定义的异常
@@ -158,5 +133,31 @@ object RetrofitClient {
                     .unsubscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
         }
+
+    /**
+     * 线程的调度
+     *
+     * @return
+     */
+    fun <V : MvpView> defaultTransformer(view: V?): ObservableTransformer<in Any, out Any>? {
+        return ObservableTransformer {
+            it.subscribeOn(Schedulers.io())
+                    .unsubscribeOn(Schedulers.io())
+                    .doOnSubscribe { view?.showLoading() }
+                    .subscribeOn(AndroidSchedulers.mainThread())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .doOnTerminate { view?.dismissLoading() }
+
+        }
+    }
+
+    fun defaultTransformer(): ObservableTransformer<in Any, out Any>? {
+        return ObservableTransformer {
+            it.subscribeOn(Schedulers.io())
+                    .unsubscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+        }
+    }
+
 
 }

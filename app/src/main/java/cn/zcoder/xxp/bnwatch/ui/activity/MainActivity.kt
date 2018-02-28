@@ -1,5 +1,6 @@
 package cn.zcoder.xxp.bnwatch.ui.activity
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -92,6 +93,7 @@ class MainActivity : BaseActivity(), View.OnClickListener {
                 startActivity<MineActivity>()
             }
             R.id.ivMsgStatus -> {
+                ARouter.getInstance().build( RouterPath.MessageCenter.PATH_MSG).navigation()
             }
             R.id.llFunction -> {
                 ARouter.getInstance().build(RouterPath.FunctionCenter.PATH_FUNCTION).navigation()
@@ -207,10 +209,12 @@ class MainActivity : BaseActivity(), View.OnClickListener {
     private var mExitTime = 0L
     override fun onBackPressed() {
         if (System.currentTimeMillis() - mExitTime < 2000) {
-            finish()
+            val home = Intent(Intent.ACTION_MAIN)
+            home.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+            home.addCategory(Intent.CATEGORY_HOME)
+            startActivity(home)
         } else {
-            toast("再按一次退出~")
-
+            toast("再按一次回到桌面~")
             mExitTime = System.currentTimeMillis()
         }
     }

@@ -23,13 +23,13 @@ open class RxPresenter<V : MvpView> : BasePresenter<V>() {
     }
 
 
-    protected fun unSubscribe(){
+    protected fun unSubscribe() {
         if (!mCompositeDisposable.isDisposed) {
             mCompositeDisposable.clear()
         }
     }
 
-     override final fun detachView() {
+    override final fun detachView() {
         super.detachView()
         unSubscribe()
     }
@@ -46,22 +46,8 @@ open class RxPresenter<V : MvpView> : BasePresenter<V>() {
         return addSubscribe(RetrofitClient.subscribe(disposable)) as E
     }
 
-    /**
-     * 执行请求
-     *
-     * @param <E>
-     * @param <T>
-     * @return
-    </T></E> */
-    protected fun <E : BaseDisposable<T>, T : BaseResponse> subscribe(observable: Observable<T>,
-                                                                      onNext: Consumer<in T>,
-                                                                      onError: Consumer<in Throwable>): E {
 
-        return addSubscribe(RetrofitClient.subscribe(observable, onNext, onError)) as E
-    }
-
-
-    private fun addSubscribe(subscription: Disposable): Disposable {
+    protected open fun addSubscribe(subscription: Disposable): Disposable {
         mCompositeDisposable.add(subscription)
         return subscription
     }

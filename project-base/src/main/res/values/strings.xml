@@ -148,4 +148,6 @@
     <string name="opened">已开启</string>
     <string name="data_is_empty">没有找到相关数据</string>
     <string name="network_unusable">网络异常</string>
+    <string name="format_go_to_school_time">上学时间段 %1$s-%2$s</string>
+    <string name="format_after_school_time">放学时间段 %1$s-%2$s</string>
 </resources>

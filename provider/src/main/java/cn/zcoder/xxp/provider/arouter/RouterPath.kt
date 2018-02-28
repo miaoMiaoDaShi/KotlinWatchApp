@@ -40,4 +40,11 @@ object RouterPath {
             const val PATH_TALK = "/talkCenter/main"
         }
     }
+
+    class MessageCenter{
+        companion object {
+            //消息中心
+            const val PATH_MSG = "/messageCenter/main"
+        }
+    }
 }

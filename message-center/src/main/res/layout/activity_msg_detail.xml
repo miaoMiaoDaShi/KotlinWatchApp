@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/allActivityColor"
+              android:orientation="vertical">
+
+    <include layout="@layout/tool_bar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130px"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="26px"
+            android:paddingRight="26px">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="小露露手表号码改变"
+                android:textColor="@color/itemTextColor"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:text="2017-12 12 21.23"
+                android:textColor="@color/gray"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray50"/>
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50px"
+            android:layout_marginTop="30px"
+            android:paddingLeft="26px"
+            android:paddingRight="26px"
+            android:text="倒萨大发送到发的说法是打发斯蒂芬"
+            android:textColor="@color/gray"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,5 +1,6 @@
 package cn.zcoder.xxp.bnwatch.ui.activity
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.os.Handler
 import cn.zcoder.xxp.base.common.Preference
@@ -12,6 +13,7 @@ import cn.zcoder.xxp.bnwatch.presenter.SplashPresenter
 import com.alibaba.android.arouter.launcher.ARouter
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
+import timber.log.Timber
 
 
 /**
@@ -23,14 +25,15 @@ import org.jetbrains.anko.toast
 
 
 class SplashActivity : BaseMvpActivity<SplashContract.View, SplashContract.Presenter>(), SplashContract.View {
-    var mSystemConfiginfo by Preference("systemConfig", "")
+    //var mSystemConfiginfo by Preference("systemConfig", "")
 
+    @SuppressLint("TimberArgCount")
     override fun showLoading() {
-
+        Timber.i("showLoading${Thread.currentThread()}")
     }
 
     override fun dismissLoading() {
-
+        Timber.i("dismissLoading${Thread.currentThread()}")
     }
 
     override fun createPresenter(): SplashContract.Presenter {
@@ -54,7 +57,6 @@ class SplashActivity : BaseMvpActivity<SplashContract.View, SplashContract.Prese
     }
 
     override fun start() {
-    toast(mSystemConfiginfo)
         getPresenter().loadSystemConfig()
     }
 

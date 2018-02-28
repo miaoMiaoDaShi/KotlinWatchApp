@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="cn.zcoder.xxp.function">
+
     <application>
         <!--功能模块-->
         <activity
@@ -121,6 +122,16 @@
         <!--手表挂失-->
         <activity
             android:name=".ui.activity.FunctionMoreDActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnchanged"/>
+        <!--亮屏时间-->
+        <activity
+            android:name=".ui.activity.LightTimeSelectActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnchanged"/>
+        <!--重复 星期几-->
+        <activity
+            android:name=".ui.activity.WeekdaySelectActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|stateUnchanged"/>
         <!--功能模块  end-->

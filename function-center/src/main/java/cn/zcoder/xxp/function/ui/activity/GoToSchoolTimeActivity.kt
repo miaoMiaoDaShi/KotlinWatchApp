@@ -11,6 +11,7 @@ import cn.zcoder.xxp.base.ui.activity.BaseActivity
 import cn.zcoder.xxp.function.R
 import cn.zcoder.xxp.ui.ToolBar
 import kotlinx.android.synthetic.main.activity_go_to_school_time.*
+import org.jetbrains.anko.startActivity
 
 /**
  * Author : zhongwenpeng
@@ -41,10 +42,7 @@ class GoToSchoolTimeActivity : BaseActivity(), View.OnClickListener {
 
     }
 
-    override fun bindListener() {
-        super.bindListener()
-        tvAmTime.onClick(this)
-    }
+
 
     /**
      * 从新加载本地数据  本地 ...
@@ -75,10 +73,20 @@ class GoToSchoolTimeActivity : BaseActivity(), View.OnClickListener {
             context.startActivity(Intent(context, GoToSchoolTimeActivity::class.java))
         }
     }
-
+    override fun bindListener() {
+        super.bindListener()
+        tvAmTime.onClick(this)
+        tvAmStopTime.onClick(this)
+        tvPmTime.onClick(this)
+        tvPmStartTime.onClick(this)
+        tvPmStopTime.onClick(this)
+        tvRepetitionType.onClick(this)
+    }
     override fun onClick(v: View?) {
         when (v?.id) {
             R.id.tvAmTime -> {
+            }
+            R.id.tvAmStartTime -> {
             }
             R.id.tvAmStopTime -> {
             }
@@ -91,6 +99,7 @@ class GoToSchoolTimeActivity : BaseActivity(), View.OnClickListener {
             R.id.tvGoHomeTime -> {
             }
             R.id.tvRepetitionType -> {
+                startActivity<WeekdaySelectActivity>()
             }
             else -> {
             }
